@@ -25,7 +25,7 @@ export default ({route, navigation}) => {
       <TextInput
         style={style.input}
         onChangeText={avatarUrl => setUser({...user, avatarUrl})}
-        placeholder="Informe o URK do Avatar"
+        placeholder="Informe o URL do Avatar"
         value={user.avatarUrl}
       />
       <Button
