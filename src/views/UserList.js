@@ -5,7 +5,7 @@ import {Button, Icon} from '@rneui/base';
 import UsersContext from '../context/UserContext';
 
 export default props => {
-  const {state} = useContext(UsersContext);
+  const {state, dispatch} = useContext(UsersContext);
   // console.warn(Object.keys(context.state));
 
   function confirmUserDeletion(user) {
@@ -13,7 +13,11 @@ export default props => {
       {
         text: 'Sim',
         onPress() {
-          console.warn('delete' + user.id);
+          // console.warn('delete' + user.id);
+          dispatch({
+            type: 'deleteUser',
+            payload: user,
+          });
         },
       },
       {

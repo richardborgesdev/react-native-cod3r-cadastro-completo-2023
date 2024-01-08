@@ -7,6 +7,8 @@ const UsersContext = createContext({});
 export const UsersProvider = props => {
   function reducer(state, action) {
     console.warn(state, action);
+
+    return state;
   }
 
   const [state, dispatch] = useReducer(reducer, initialState);
